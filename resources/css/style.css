@@ -29,9 +29,9 @@ ul {
     width: 100%;
     justify-content: center;
     align-content: center;
-    grid-template-rows: 80px minmax(300px, auto) 50px;
+    grid-template-rows: 80px minmax(300px, auto) 70px;
     grid-template-columns: 1fr;
-    row-gap: 2em;
+    /* row-gap: 2em; */
     grid-template-areas: 
         "header"
         "main"
@@ -186,6 +186,7 @@ main {
  section.content.alt {
      background-color: var(--blue-light);
      text-align: left;
+     padding-bottom: 2em;
  }
 
  section.content.alt p, section.content.alt h2 {
@@ -294,9 +295,15 @@ main {
 
 #skills-container {
     display: flex;
-    width: var(--max-width);
+    width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 2em auto;
+}
+
+#skills-container > * {
+    font-size: 2em;
+    flex: 1;
 }
 
 footer {
