@@ -157,16 +157,14 @@ nav {
 
 nav ul {
     flex: 1;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 1em;
     margin-right: 3em;
     font-weight: 200;
     font-size: 20px;
 }
 
-nav ul li {
+nav ul li, #collapsableSidebar {
     margin-left: 2em;
     padding-bottom: 0.1em;
     border-bottom: 1px solid transparent;
@@ -175,6 +173,22 @@ nav ul li {
 
 nav ul li:hover {
     border-bottom: 1px solid var(--blue);
+}
+
+nav .icon {
+    display: none;
+    font-size: 1.6em;
+    color: var(--blue);
+  }
+
+@media screen and (max-width: 776px) {
+    nav .icon {
+        display: block
+    }
+
+    nav ul li {
+        display: none;
+    }
 }
 
 .container {
@@ -356,3 +370,34 @@ footer {
 footer p {
     flex: 1
 }
+
+/* The sidebar menu */
+#sidebar {
+    top: var(--header-height);
+    height: 50%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+#sidebar a {
+    padding: 8px 8px 8px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.2s;
+    }
+
+/* When you mouse over the navigation links, change their color */
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+  

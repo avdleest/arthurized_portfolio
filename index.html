@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Urbanist:wght@200;400;600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="resources/css/fa/css/all.min.css">
+  <script src="resources/js/sidebar.js" async></script>
   <title>Arthurized Portfolio</title>
 </head>
 <body class="gridcontainer">
   <header>
     <!-- TODO: Add JavaScript to hide/show navigation menu -->
-    <!-- TODO: Add media queries -->
     <div class="header-container">
       <div class="logo-container">
         <div class="logo-text">Arthurized Portfolio</div>
@@ -26,11 +26,24 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="switchNav()">
+            <i class="fas fa-bars"></i>
+          </a>
         </ul>
       </nav>
     </div>
   </header>
   <main>
+    <!-- Collapsable sidebar -->
+    <div id="sidebar">
+      <ul>
+        <li><a href="#aboutme">About me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </a>
+      </ul>
+    </div>
     <!-- Section About Me -->
     <section class="content">
       <div class="container title e-padding">
