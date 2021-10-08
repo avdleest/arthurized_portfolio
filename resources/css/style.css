@@ -18,6 +18,12 @@ body {
     font-size: 18px;
 }
 
+main {
+    grid-area: main;
+    z-index: 5;
+    max-width: 100%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -147,14 +153,6 @@ nav ul li:hover {
     border-bottom: 1px solid var(--blue);
 }
 
-main {
-    grid-area: main;
-    z-index: 5;
-    /* max-width: 1170px; */
-    /* width: 80%; */
-    /* margin: 0 2em; */
-}
-
 .container {
     margin: 0 auto;
     max-width: var(--max-width);
@@ -172,25 +170,28 @@ main {
     padding: 1em 3em;
 }
 
-@media screen and (max-width: 850px) {
+/* @media screen and (max-width: 850px) {
     article {
         width: 100%;
         margin: 0;
     }
- }
+ } */
 
  section.content {
     padding: 0 2em;
  }
+ 
+@media screen and (max-width: calc(1260px + 4em)) {
+    section.content {
+        padding: 0;
+        background-color: red;
+    }
+}
 
  section.content.alt {
      background-color: var(--blue-light);
      text-align: left;
      padding-bottom: 2em;
- }
-
- .list {
-    padding: 1em;
  }
 
  .row > * {
@@ -199,14 +200,15 @@ main {
  }
 
  .row {
-    display: flex;
-    flex-wrap: wrap;
 	margin: 0 auto;
 	max-width: var(--max-width);
-	padding: 0 30px;
 	position: relative;
-	width: 100%;
 }
+/* 
+@media screen and (max-width: calc(1260px + 4em)) {
+    .row {
+        max-width: initial;
+    } */
 
  .alternate-bg, .alternate-bg h2, .alternate-bg p {
      background-color: var(--blue);
@@ -229,10 +231,6 @@ main {
 	align-items: stretch;
 	display: flex;
 	flex-flow: row wrap;
-}
-
-.team {
-    flex: 0 0 380px;
 }
 
 /* @media screen and (max-width: 850px) {
