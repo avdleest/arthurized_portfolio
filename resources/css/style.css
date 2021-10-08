@@ -189,10 +189,6 @@ main {
      padding-bottom: 2em;
  }
 
- section.content.alt p, section.content.alt h2 {
-     text-align: left;
- }
-
  .list {
     padding: 1em;
  }
