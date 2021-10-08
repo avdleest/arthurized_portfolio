@@ -16,6 +16,7 @@ html {
 body {
     font-family: 'Poppins', 'Arial', sans-serif;
     font-size: 18px;
+    max-width: 100%;
 }
 
 main {
@@ -37,7 +38,6 @@ ul {
     align-content: center;
     grid-template-rows: 80px minmax(300px, auto) 70px;
     grid-template-columns: 1fr;
-    /* row-gap: 2em; */
     grid-template-areas: 
         "header"
         "main"
@@ -170,23 +170,11 @@ nav ul li:hover {
     padding: 1em 3em;
 }
 
-/* @media screen and (max-width: 850px) {
-    article {
-        width: 100%;
-        margin: 0;
-    }
- } */
-
- section.content {
-    padding: 0 2em;
- }
- 
-@media screen and (max-width: calc(1260px + 4em)) {
+/* @media screen and (max-width: calc(1260px + 4em)) {
     section.content {
-        padding: 0;
         background-color: red;
     }
-}
+} */
 
  section.content.alt {
      background-color: var(--blue-light);
@@ -200,27 +188,24 @@ nav ul li:hover {
  }
 
  .row {
+    display: flex;
+    flex-wrap: wrap;
 	margin: 0 auto;
 	max-width: var(--max-width);
 	position: relative;
+    padding: 0 30px;
+    width: 100%;
 }
-/* 
-@media screen and (max-width: calc(1260px + 4em)) {
+
+@media screen and (max-width: 1259px) {
     .row {
-        max-width: initial;
-    } */
+        padding: 0;
+    }
+}
 
  .alternate-bg, .alternate-bg h2, .alternate-bg p {
      background-color: var(--blue);
      color: white;
- }
-
-
- .items {
-     justify-content: space-around;
-     display: flex;
-     flex-wrap: wrap;
-     width: 100%;
  }
 
  .item {
