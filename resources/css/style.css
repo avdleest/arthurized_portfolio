@@ -127,7 +127,6 @@ p {
     }
 }
 
-
 .emphasis {
     font-weight: 600;
     text-align: center;
@@ -381,7 +380,6 @@ footer p {
     flex: 1
 }
 
-/* The sidebar menu */
 #sidebar {
     top: var(--header-height);
     height: 170px; 
